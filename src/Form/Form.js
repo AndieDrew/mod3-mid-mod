@@ -32,8 +32,9 @@ clearInputs = () => {
 
   render() {
     return (
-      <form>
+      <form className='form'>
         <input
+          className='name'
           type='text'
           placeholder='Name'
           name='name'
@@ -42,6 +43,7 @@ clearInputs = () => {
         />
 
         <input
+          className='date'
           type='text'
           placeholder='Date (mm/dd)'
           name='date'
@@ -50,6 +52,7 @@ clearInputs = () => {
         />
 
         <input
+          className='time'
           type='text'
           placeholder='Time'
           name='time'
@@ -58,6 +61,7 @@ clearInputs = () => {
         />
 
         <input
+          className='number'
           type='text'
           placeholder='Number of guests'
           name='number'

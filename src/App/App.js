@@ -16,7 +16,6 @@ class App extends Component {
     getReservations()
     .then(data => {
       this.setState({ reservations: data })
-      console.log(this.state.reservations);
     })
     .catch(error => this.setState({ error: 'Something went wrong!'}))
   }

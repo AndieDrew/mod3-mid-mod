@@ -4,6 +4,7 @@ import Card from '../Card/Card.js';
 
 const Reservations = ({ res }) => {
   const resCards = res.map(element => {
+    console.log(res);
   return (
     <Card
       id={element.id}
