@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
 import { getReservations } from '../api-calls';
-import Reservations from '../Reservations/Reservations.js'
+import Reservations from '../Reservations/Reservations.js';
+import Form from '../Form/Form.js';
 
 class App extends Component {
   constructor() {
@@ -25,7 +26,7 @@ class App extends Component {
       <main className="App">
         <h1 className='app-title'>Turing Cafe Reservations</h1>
         <div className='resy-form'>
-
+          <Form/>
         </div>
         <div className='resy-container'>
           <Reservations res = {this.state.reservations}/>
