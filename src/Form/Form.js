@@ -26,7 +26,6 @@ bookReservation = event => {
   this.props.addReservation(newRes);
   this.clearInputs();
   postReservations( this.state )
-  .catch(error => this.setState({ error: 'Something went wrong!'}))
 }
 
 clearInputs = () => {

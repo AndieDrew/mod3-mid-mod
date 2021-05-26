@@ -4,7 +4,6 @@ export const getReservations = () => {
 }
 
 export const postReservations = ( reservation ) => {
-  console.log(reservation);
   fetch('http://localhost:3001/api/v1/reservations', {
       method: 'POST',
       body: JSON.stringify({
