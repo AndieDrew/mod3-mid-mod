@@ -1,9 +1,25 @@
 import React from 'react';
 import './Reservations.css';
+import Card from '../Card/Card.js';
 
 const Reservations = ({ res }) => {
+  const resCards = res.map(element => {
   return (
-    <h1>Reservation</h1>
+    <Card
+      id={element.id}
+      name={element.name}
+      date={element.date}
+      time={element.time}
+      number={element.number}
+    />
+  )
+})
+
+
+  return (
+  <div className='res-cards'>
+    {resCards}
+  </div>
   )
 }
 
