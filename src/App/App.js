@@ -1,13 +1,23 @@
 import React, { Component } from 'react';
 import './App.css';
+import { getReservations } from '../api-calls';
 
 class App extends Component {
   constructor() {
   super();
    this.state = {
-
+     reservations: [],
    }
  }
+
+  componentDidMount() {
+    getReservations()
+    .then(data => {
+      this.setState({ reservations: data })
+      console.log(this.state.reservations);
+    })
+    .catch(error => this.setState({ error: 'Something went wrong!'}))
+  }
 
   render() {
     return (
